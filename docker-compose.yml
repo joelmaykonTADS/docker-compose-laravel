@@ -18,6 +18,8 @@ services:
     networks:
       - laravel
 
+  
+
   mysql:
     image: mysql:5.7.29
     container_name: mysql
@@ -34,6 +36,8 @@ services:
       SERVICE_NAME: mysql
     networks:
       - laravel
+    volumes:
+      - ./mysql:/var/lib/mysql
 
   php:
     build:
